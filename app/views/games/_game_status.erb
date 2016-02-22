@@ -1,0 +1,8 @@
+<strong>Word : </strong>
+
+<%= (@game.word.chars.map\
+{ |character| @game.guesses.map(&:guess).include?(character) ? character : "_" }).join %>
+
+
+<strong> Misses : </strong>
+<%= @game.incorrect_guesses %>

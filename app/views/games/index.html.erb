@@ -1,0 +1,25 @@
+<h1>Listing Hangman Games</h1>
+
+<p><%= link_to 'New Hangman game', new_game_path %></p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Word</th>
+  </tr>
+
+  <% @games.each do |game| %>
+    <tr>
+      <td><%= game.id %></td>
+      <% if game.running? %>
+        <td><%= (game.word.chars.map\
+          { |character| game.guesses.map(&:guess).include?(character) ?\
+             character : "_" }).join %></td>
+        <td><%= link_to 'Play', game_path(game) %></td>
+      <% else %>
+        <td><%= game.word %></td>
+        <td><%= link_to 'Results', game_path(game) %></td>
+      <% end %>
+      <td><%= link_to 'Destroy', game_path(game), method: :delete %></td>
+    </tr>
+  <% end %>
+</table>

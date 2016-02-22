@@ -1,0 +1,12 @@
+<p>
+
+    <% if @game.running? %>
+        <%= render partial: 'games/game_status' %>
+        <%= render partial: 'guesses/read_guess' %>
+    <% else %>
+        <%= render 'games/game_statistics' %>
+    <% end%>
+
+</p>
+
+<%= link_to 'Back', games_path %>

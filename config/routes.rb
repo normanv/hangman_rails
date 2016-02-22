@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-
   Rails.application.routes.draw do
 
-  resources :games
+  resources :games, except: [:edit] do
+    resources :guesses
+  end
 
-  root 'hangman#index'
+  root 'games#index'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

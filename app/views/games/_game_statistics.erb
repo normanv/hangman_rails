@@ -1,0 +1,12 @@
+<p>
+  Game is <%= @game.won? ? "won" : "lost" %>.
+
+  The word was "<%= @game.word %>"
+
+  <strong>Correct guesses : </strong>
+  <%= @game.correct_guesses %>
+
+  <strong> Incorrect guesses : </strong>
+  <%= @game.incorrect_guesses %>
+
+</p>
