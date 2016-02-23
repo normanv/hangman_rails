@@ -21818,3 +21818,39 @@ Processing by GamesController#index as HTML
   [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 58]]
   Rendered games/index.html.erb within layouts/application (7.7ms)
 Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/games" for ::1 at 2016-02-23 12:30:34 +1300
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 54]]
+  [1m[35mGuess Load (0.1ms)[0m  SELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?  [["game_id", 55]]
+  [1m[36mGuess Load (0.2ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 56]]
+  [1m[35mGuess Load (0.1ms)[0m  SELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?  [["game_id", 57]]
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 58]]
+  Rendered games/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-02-23 12:30:36 +1300
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 54]]
+  [1m[35mGuess Load (0.2ms)[0m  SELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?  [["game_id", 55]]
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 56]]
+  [1m[35mGuess Load (0.1ms)[0m  SELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?  [["game_id", 57]]
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 58]]
+  Rendered games/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-02-23 13:04:11 +1300
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 54]]
+  [1m[35mGuess Load (0.2ms)[0m  SELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?  [["game_id", 55]]
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 56]]
+  [1m[35mGuess Load (0.1ms)[0m  SELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?  [["game_id", 57]]
+  [1m[36mGuess Load (0.1ms)[0m  [1mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 58]]
+  Rendered games/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 38ms (Views: 32.7ms | ActiveRecord: 1.2ms)

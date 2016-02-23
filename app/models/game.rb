@@ -1,5 +1,6 @@
 class Game < ActiveRecord::Base
   has_many :guesses
+  
   before_validation :format_word
   validates :word,
   presence: true,
@@ -22,16 +23,14 @@ class Game < ActiveRecord::Base
   end
 
   def correct_guesses
-    p guesses
-    correct_guesses = guesses.map(&:guess).select { |g| word.include?(g) }
+    guesses.map(&:guess).select { |g| word.include?(g) }
   end
 
   def incorrect_guesses
-    incorrect_guesses = guesses.map(&:guess).reject { |g| word.include?(g) }
+    guesses.map(&:guess).reject { |g| word.include?(g) }
   end
 
   def format_word
     self.word = self.word.upcase
   end
-
 end
